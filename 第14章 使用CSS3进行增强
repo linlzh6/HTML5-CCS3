@@ -1,0 +1,126 @@
+14.1 为元素创建圆角
+.all-corners {
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
+	background-clip: padding-box; /*背景被裁剪到内边距框。*/
+}
+.one-corner {
+	-webkit-border-top-left-radius: 75px;
+	border-top-left-radius: 75px;
+}
+.elliptical-corner {
+	-webkit-border-radius: 50px/20px;
+	border-radius: 50px/20px;
+}
+.circle-corner {
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+}
+
+14.2 为文本添加阴影
+.blur-inversed {
+	color: white;
+	text-shadow: 2px 2px 10px #000; /* black */
+}
+
+/* this example has two shadows, but you can include 
+more by separating each with a comma */
+.multiple {
+	text-shadow:
+		2px 2px white, 
+		6px 6px rgba(50,50,50,.25);
+}
+
+14.3 为其他元素添加阴影box-shadow
+1 为元素添加阴影 参数列表：x-offset/y-offset/blur-radius/spread/color
+.shadow {
+	-webkit-box-shadow: 4px 4px 5px #999;
+	box-shadow: 4px 4px 5px #999;
+}
+2 创建内阴影
+.inset-shadow {
+	-webkit-box-shadow: 2px 2px 10px #666 inset;
+	box-shadow: 2px 2px 10px #666 inset;
+}
+3 为元素应用多重阴影
+.multiple {
+	-webkit-box-shadow: 
+		2px 2px 10px rgba(255,0,0,.75), 
+		5px 5px 20px blue;
+
+	box-shadow: 
+		2px 2px 10px rgba(255,0,0,.75), 
+		5px 5px 20px blue;
+}
+4 将box-shadow改回默认值
+webkit-box-shadow: none;
+box-shadow: none;
+
+14.4 应用多重背景
+.night-sky {
+	background-color: navy; /* fallback color */
+	background-image: 
+ 	 	url(../img/ufo.png), 
+ 	 	url(../img/stars.png), 
+ 		url(../img/stars.png), 
+ 		url(../img/sky.png);
+
+	background-position: 
+ 	 	50% 102%, 
+ 	 	100% -150px, 
+ 	 	0 -150px, 
+ 	 	50% 100%;
+
+	background-repeat: 
+ 		no-repeat, 
+ 		no-repeat, 
+ 		no-repeat, 
+ 		repeat-x;
+
+	height: 300px;
+	margin: 25px auto 0; /* slightly different than book */
+	padding-top: 36px;
+	width: 75%;
+}
+
+/*简记法*/
+.night-sky {
+	/* fallback with both a color and image */
+	background: navy url(../img/ufo.png) no-repeat center bottom;
+	
+	/* for supporting browsers */
+	background: 		
+		url(../img/ufo.png) no-repeat 50% 102%,
+		url(../img/stars.png) no-repeat 100% -150px,
+		url(../img/stars.png) no-repeat 0 -150px,
+		url(../img/sky.png) repeat-x 50% 100%;
+
+	height: 300px;
+	margin: 25px auto 0;
+	padding-top: 36px;
+	width: 75%;
+}
+
+14.5 使用渐变背景
+1 创建备用背景颜色 background: color
+2 定义线性渐变 background: linear-gradient()
+.vertical-up {
+	background: silver;
+	background: linear-gradient(to top, silver, black);
+}
+3 定义径向渐变 background: radial-gradient()
+
+14.6 为元素设置不透明度
+.box {
+	background: #000; /* black */
+	opacity: .5; /* Makes it half (50%) as opaque as the default */
+	padding: 20px;
+	width: 420px;
+}
+
+14.7 生成内容的效果 :before  :after
+.more:after {
+	content: “ >>”;
+}
+
+14.8 使用sprite拼合图像
