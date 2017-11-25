@@ -1,0 +1,30 @@
+12.1 创建可伸缩图像
+1 在HTML的img标签中省略width和height属性。
+2 为可伸缩图像的图像应用max-width:100%（不用width因为会让图像尽可能地填充容器）。
+
+12.2 创建弹性布局网页
+示例：
+.page{ max-width:960px;}
+main{ width:62.5%;}
+.sidebar{ width:31.25%;}
+
+12.3 理解和实现媒体查询
+语法：
+Logic（可选）：only（限制）/not（取反）
+Type（媒体类型）：screen/print
+Feature（可选/预定义的媒体特性）：min-width/max-width/resolution
+示例：
+HTML5 
+…
+	<link rel=”stylesheet” media=”only screen and (min-width:480px) and (maxwidth:767px)” 
+		href=”styles.css” />
+	<link rel=”stylesheet” media=”only screen and (orientation:landscape)” href=”style.css” />
+…
+CSS3
+@media only screen and (min-width:480px) and (maxwidth:767px){/*样式规则*/}
+@media only screen and (orientation:landscape){/*样式规则*/}
+Landscape:横屏 portrait:竖屏
+
+拓展：
+<meta name=”viewport” content=”width=device-width,initial-scale=1” />
+视觉区域的宽度会被设成与设备宽度相同的值。
