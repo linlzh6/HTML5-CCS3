@@ -1,0 +1,64 @@
+13.1 使用Web字体设置文本样式
+
+HTML5
+…
+<link ref=”stylesheet” href=”example.css”/>
+…
+
+CSS3
+…
+body {
+    font-family: 'PTSans', sans-serif;
+    font-size: 100%;
+    line-height: 1.25;
+}
+
+/* Regular text */
+@font-face {
+    font-family: 'PTSans';  /*重命名*/
+    src: url('PTS55F-webfont.eot');
+    src: url('PTS55F-webfont.eot?#iefix') format('embedded-opentype'),
+         url('PTS55F-webfont.woff') format('woff'),
+         url('PTS55F-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+…
+
+13.2 为Web字体应用斜体和粗体
+
+/* Italic text */
+@font-face {
+    font-family: 'PTSans';
+    src: url('PTS56F-webfont.eot');
+    src: url('PTS56F-webfont.eot?#iefix') format('embedded-opentype'),
+         url('PTS56F-webfont.woff') format('woff'),
+         url('PTS56F-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+/* Bold text */
+@font-face {
+    font-family: 'PTSans';
+    src: url('PTS75F-webfont.eot');
+    src: url('PTS75F-webfont.eot?#iefix') format('embedded-opentype'),
+         url('PTS75F-webfont.woff') format('woff'),
+         url('PTS75F-webfont.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+13.3 使用Google Fonts的Web字体
+HTML5
+…
+<link href=http://fonts.googleapis.com/css?family=Lato:300|Open+Sans:700 rel=”stylesheet”/>
+<link rel=”stylesheet” href=”style.css”/>
+…
+CSS3
+…
+h1 {
+	font-family: ‘Lato’, sans-serif; /*无衬线*/
+	font-weight: 300;
+}
+…
