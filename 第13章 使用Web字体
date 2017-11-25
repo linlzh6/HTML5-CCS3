@@ -52,13 +52,13 @@ body {
 13.3 使用Google Fonts的Web字体
 HTML5
 …
-<link href=http://fonts.googleapis.com/css?family=Lato:300|Open+Sans:700 rel=”stylesheet”/>
+<link href="http://fonts.googleapis.com/css?family=Lato:300|Open+Sans:700" rel="stylesheet"/>
 <link rel=”stylesheet” href=”style.css”/>
 …
 CSS3
 …
 h1 {
-	font-family: ‘Lato’, sans-serif; /*无衬线*/
+	font-family: 'Lato', sans-serif; /*无衬线*/
 	font-weight: 300;
 }
 …
