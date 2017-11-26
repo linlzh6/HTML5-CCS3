@@ -1,0 +1,36 @@
+15.1 创建有序列表和无序列表
+1 有序列表
+<ol>
+	<li>This is the first paragraph.</li>
+	<li>This is the second paragraph.</li>
+</ol>
+
+2 无序列表
+<ul>
+	<li>This is the first paragraph.</li>
+	<li>This is the second paragraph.</li>
+</ul>
+
+15.2 选择标记
+1 选择标记 list-style-type: marker
+2 显示无标记列表 list-style-type: none
+3 使用定制的标记 background: url( )  padding-left:1.75em
+
+15.3 选择列表的起始编号
+<ol start=”2”>
+	<li value=”5”>A Test.</li>
+</ol>
+
+15.4 控制标记的位置
+list-sytle-position: inside /*outside*/
+
+15.5 同时设置所有的列表样式属性
+list-sytle-position: circle inside /*outside*/
+
+15.6 设置嵌套列表的样式
+
+15.7 创建描述列表
+<dl>
+	<dt>Title</dt>
+	<dd>This is a description of title.</dd>
+</dl>
